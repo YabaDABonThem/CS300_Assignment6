@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "node.h"
+#include "UPCEntry.h"
 
 using namespace std;
 
@@ -17,13 +18,9 @@ class LinkedList {
         // LinkedList(const string& other); // constructor that takes a string
         ~LinkedList(); // destructor
         
-        void addFront(int value); // add an item to the front
+        void add_front(UPCEntry value); // add an item to the front
         int length() const; // get length of this list
-        char& operator[](const int n) const; // get string at index n
 
-    private:
-        // other helper methods
-        void destroy();
 };
 
 #endif

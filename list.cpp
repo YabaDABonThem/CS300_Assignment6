@@ -1,7 +1,7 @@
 #include "list.h"
 #include <iostream>
 
-void LinkedList::addFront(int value) {
+void LinkedList::add_front(UPCEntry value) {
     ++_length;
     node *temp = new node(value);
     temp->next = head;
@@ -13,14 +13,10 @@ int LinkedList::length() const {
     return _length;
 }
 
-void LinkedList::destroy(){
+LinkedList::~LinkedList() {
     while(head) {
         node *prev = head;
         head = head->next;
         delete prev;
     }
-}
-
-LinkedList::~LinkedList() {
-    destroy();
 }

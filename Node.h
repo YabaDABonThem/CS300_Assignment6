@@ -8,7 +8,7 @@ class node
 		std::string data;
 		long long up;
 		node *next;
-		node(char data) : data(data), next(NULL) {}
+		node(UPCEntry data) : data(data), next(NULL) {}
 };
 
 #endif
