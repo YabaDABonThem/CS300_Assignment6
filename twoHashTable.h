@@ -38,6 +38,14 @@ public:
          * you use the two hash functions to find out the two bin locations in the table, you will
          * search both two bins in the table since you won’t know which bin contains your search object. 
          */
+        // basically loop through table[item.hash1(_tableSize)] to see if you found the item, then repeat for the other list.
+        node temp = table[item.hash1(_tableSize)]->get_head(); // you need to make this a pointer
+        while (false) { // CHANGE THIS LATER
+            if (temp.data == item) {
+                // return position 
+            }
+            // temp = temp.next;
+        }
     }
     float getStdDev();
 

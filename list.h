@@ -20,6 +20,7 @@ class LinkedList {
         
         void add_front(UPCEntry value); // add an item to the front
         int length() const; // get length of this list
+        node get_head();
 
 };
 

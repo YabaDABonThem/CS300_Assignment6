@@ -20,3 +20,7 @@ LinkedList::~LinkedList() {
         delete prev;
     }
 }
+
+node LinkedList::get_head() {
+    return *head;
+}
