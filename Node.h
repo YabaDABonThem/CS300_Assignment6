@@ -1,14 +1,14 @@
 #ifndef NODE_H
 #define NODE_H
 #include <iostream>
+#include "UPCEntry.h"
 
 class node
 {
 	public:
-		std::string data;
-		long long up;
+		UPCEntry upc;
 		node *next;
-		node(UPCEntry data) : data(data), next(NULL) {}
+		node(const UPCEntry& upc) : upc(upc), next(nullptr) {}
 };
 
 #endif

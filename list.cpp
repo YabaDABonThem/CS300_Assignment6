@@ -1,7 +1,11 @@
+#ifndef LINKEDLIST_CPP
+#define LINKEDLIST_CPP
+
 #include "list.h"
 #include <iostream>
 
-void LinkedList::add_front(UPCEntry value) {
+/*
+void LinkedList::add_front(const UPCEntry& value) {
     ++_length;
     node *temp = new node(value);
     temp->next = head;
@@ -21,6 +25,9 @@ LinkedList::~LinkedList() {
     }
 }
 
-node LinkedList::get_head() {
-    return *head;
+node* LinkedList::get_head() {
+    return head;
 }
+*/
+
+#endif

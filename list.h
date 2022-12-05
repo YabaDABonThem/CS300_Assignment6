@@ -16,11 +16,26 @@ class LinkedList {
         LinkedList() = default; // default constructor
 
         // LinkedList(const string& other); // constructor that takes a string
-        ~LinkedList(); // destructor
+        ~LinkedList() {
+            while(head) {
+                node *prev = head;
+                head = head->next;
+                delete prev;
+            }
+        } // destructor
         
-        void add_front(UPCEntry value); // add an item to the front
-        int length() const; // get length of this list
-        node get_head();
+        void add_front(const UPCEntry& value) {
+            ++_length;
+            node *temp = new node(value);
+            temp->next = head;
+            head = temp;
+        } // add an item to the front
+        int length() const {
+            return _length;
+        } // get length of this list
+        node* get_head() {
+            return head;
+        } // get the pointer to the head
 
 };
 
